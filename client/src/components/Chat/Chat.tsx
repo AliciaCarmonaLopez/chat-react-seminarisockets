@@ -42,6 +42,12 @@ const Chat: React.FC = () => {
       if (data.status === 'unauthorized') {
         window.location.href = '/';
       }
+      else if (data.status === 'joined') {
+        if(typeof(data.user) !== 'undefined'){
+          alert(`${data.user} ha entrado a la sala`);
+        }
+        //
+      }
     });
 
     return () => {
